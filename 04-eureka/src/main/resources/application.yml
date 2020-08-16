@@ -1,0 +1,20 @@
+server:
+  port: 8762     # 当前服务的端口号
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: true    # 注册到另外的Eureka
+    fetchRegistry: true         # 从另外的Eureka拉取信息
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka/
+
+# 站点认证的用户名和密码
+spring:
+  security:
+    user:
+      name: root
+      password: root
+  application:
+    name: eureka
